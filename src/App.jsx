@@ -46,11 +46,10 @@ function App() {
             <Sparkles size={16} />
             <span>Open to PM Internships Summer 2025</span>
           </div>
-          
+          <div>
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">Prisha Velhal</span>
           </h1>
-          <div>
           <img src={avatarImage} alt="Prisha" className="hero-avatar"/>
           </div>
           <p className="hero-description">
