@@ -50,8 +50,9 @@ function App() {
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">Prisha Velhal</span>
           </h1>
-          <img src={avatarImage}/>
-          
+          <div>
+          <img src={avatarImage} alt="Prisha" className="hero-avatar"/>
+          </div>
           <p className="hero-description">
             Aspiring Product Manager passionate about creating user-centered solutions. 
             Currently studying Computer Science with a minor in Business at Oregon State University and seeking opportunities to learn and grow in product.
