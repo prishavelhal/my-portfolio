@@ -29,7 +29,8 @@ function App() {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
-          <div className="nav-logo">Prisha Velhal</div>
+        <img src={avatarImage} alt="Prisha" className="hero-avatar-nav"/>
+          {/* <div className="nav-logo">Prisha Velhal</div> */}
           <div className="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -42,21 +43,21 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <div className="badge">
-            <Sparkles size={16} />
-            <span>Open to PM Internships Summer 2025</span>
-          </div>
-          <div>
-          <h1 className="hero-title">
-            Hi, I'm <span className="gradient-text">Prisha Velhal</span>
-          </h1>
-          <img src={avatarImage} alt="Prisha" className="hero-avatar"/>
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Hi, I'm <span className="gradient-text">Prisha Velhal</span>
+            </h1>
+              <img src={avatarImage} alt="Prisha" className="hero-avatar"/>
           </div>
           <p className="hero-description">
             Aspiring Product Manager passionate about creating user-centered solutions. 
             Currently studying Computer Science with a minor in Business at Oregon State University and seeking opportunities to learn and grow in product.
           </p>
           
+          <div className="badge">
+            <Sparkles size={16} />
+            <span>Open to PM Internships Summer 2025</span>
+          </div>
           <div className="hero-buttons">
             <a href="#portfolio" className="btn btn-primary">
               View My Work
