@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, Mail, Linkedin, Github, FileText, Sparkles, Briefcase, GraduationCap } from 'lucide-react';
 import './App.css';
+import avatarImage from './assets/avatar.png';
 
 function App() {
   const experiences = [
@@ -49,6 +50,7 @@ function App() {
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">Prisha Velhal</span>
           </h1>
+          <img src={avatarImage}/>
           
           <p className="hero-description">
             Aspiring Product Manager passionate about creating user-centered solutions. 
