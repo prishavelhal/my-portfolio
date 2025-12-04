@@ -271,6 +271,25 @@ body {
   font-size: 0.875rem;
 }
 
+.bullet-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.bullet-list li {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.bullet-list li::before {
+  content: "•";
+  color: #334155;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+}
+
 /* Portfolio Section */
 .portfolio-grid {
   display: grid;

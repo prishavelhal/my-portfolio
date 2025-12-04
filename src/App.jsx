@@ -9,8 +9,62 @@ function App() {
       role: "Founder and President",
       company: "Product Management Club @ OSU",
       period: "June 2025  - Present",
-      description: "fill this in",
-      tags: ["User Research", "Roadmapping", "Analytics"]
+      description: 
+      <ul className='bullet-list'>
+        <li>Leading Oregon State University’s first Product Management Club, defining the club’s structure and programming
+                      roadmap while cultivating a cross-functional product community through strategic partnerships, industry outreach,
+                      and thoughtful leadership.</li>
+                    
+        <li>Oversee internal club software projects through the product lifecycle by defining problems, leading cross-disciplinary
+                      teams, and driving measurable outcomes while mentoring members in product management principles.</li>
+                      
+        <li>Represent the organization publicly by moderating high-impact panels, speaker events, and workshops,
+                      strengthening the club’s visibility and industry relationships.</li>
+                      
+        <li>Launched initiatives such as Engineering Capstone Integration Workshops in university capstone classes, connecting
+                      students with real-world PM frameworks for their senior capstone projects.</li>
+      </ul>,
+      tags: ["Cross-Functional Leadership", "Product Roadmapping", "User Research", "Communication & Public Speaking", "Product Lifecylce Management", "Collaboration"]
+    },
+
+    {
+      role: "HCI Research Lab Intern",
+      company: "Oregon State University",
+      period: "Sept 2023 - May 2025",
+      description: 
+       <ul className='bullet-list'>
+        <li>Researched demographic disparities and algorithmic biases in AI, generating actionable insights to create inclusive
+        user experiences.</li>
+                      
+        <li>Analyzed datasets using R and Excel to evaluate user data and identify inclusivity bugs in software.</li>
+                      
+        <li>Co-authored peer-reviewed technical publications in the field of HCI to communicate findings to both technical and
+        non-technical audiences.</li>
+
+      </ul>,
+       tags: ["Empirical Research", "Technical Writing", "User Experience Research", "Data Analysis"]
+    },
+
+    {
+      role: "Product and Data Analyst Intern",
+      company: "AR Rahman Studios",
+      period: "July 2022 - Nov 2022",
+      description: 
+       <ul className='bullet-list'>
+        <li>Assisted in the development of the Le Musk VR project, the world’s first virtual reality film with olfactory
+        elements.</li>
+                      
+        <li>Supported the development of the Le Musk VR project by collecting and analyzing user and technical data to
+        inform project decisions and optimize viewer experience.</li>
+                      
+        <li>Coordinated cross-functional activities, including MPAA reporting, film promotion, and technical activation of
+        premiere events.</li>
+
+        <li>Monitored post-launch performance and user engagement, using insights to inform product improvements and
+        future VR initiatives.</li>
+
+      </ul>,
+       tags: ["Product Development", "Technical Operations", "Post-Launch Analysis", "User Experience Optimization", "Media Production"]
     }
   ];
 
