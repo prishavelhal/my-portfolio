@@ -28,7 +28,7 @@ function App() {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
-          <div className="nav-logo">YourName</div>
+          <div className="nav-logo">Prisha Velhal</div>
           <div className="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -151,15 +151,15 @@ function App() {
             </p>
             
             <div className="contact-links">
-              <a href="mailto:your.email@example.com" className="contact-btn">
+              <a href="mailto:prisha.velhal@gmail.com" className="contact-btn">
                 <Mail size={18} />
                 Email
               </a>
-              <a href="https://linkedin.com/in/yourprofile" className="contact-btn">
+              <a href="https://linkedin.com/in/prishavelhal" className="contact-btn">
                 <Linkedin size={18} />
                 LinkedIn
               </a>
-              <a href="https://github.com/yourprofile" className="contact-btn">
+              <a href="https://github.com/prishavelhal" className="contact-btn">
                 <Github size={18} />
                 GitHub
               </a>
@@ -170,7 +170,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Designed & built with care by Your Name © 2024</p>
+        <p>Prisha Velhal © 2025</p>
       </footer>
     </div>
   );
