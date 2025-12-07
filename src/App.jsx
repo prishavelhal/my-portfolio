@@ -116,7 +116,7 @@ function App() {
             <a href="#portfolio" className="btn btn-primary">
               View My Work
             </a>
-            <a href="/resume.pdf" className="btn btn-secondary">
+            <a href="resume.pdf" className="btn btn-secondary">
               <FileText size={18} />
               Resume
             </a>
@@ -134,7 +134,7 @@ function App() {
             </p>
             <p className="about-text">
               I love the intersection of user empathy, data-driven decision making, and creative 
-              problem solving. When I'm not thinking about products, you can find me cooking up a storm in the kitchen.
+              problem solving. When I'm not thinking about products, you can find me cooking up a storm in the kitchen or annoying my dog!
             </p>
             
             <div className="about-education">
