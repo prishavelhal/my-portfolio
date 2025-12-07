@@ -130,11 +130,20 @@ function App() {
           <h2 className="section-title">About Me</h2>
           <div className="about-card">
             <p className="about-text">
-              Hello! I'm a third-year student at Oregon State University majoring in Computer Science with a minor in Business. Add more to this.
+              Hello! I'm a third-year student at Oregon State University majoring in Computer Science with a minor in Business.
             </p>
             <p className="about-text">
-              I love the intersection of user empathy, data-driven decision making, and creative 
-              problem solving. When I'm not thinking about products, you can find me cooking up a storm in the kitchen or annoying my dog!
+             I’m passionate about blending data-driven insights and creative problem solving 
+             to build products that make an impact. I love digging into problems, uncovering user insights, and working 
+             with technical teams to bring ideas from concept to launch. So much so that I even
+             founded my university's first Product Management Club to build a community around
+             product thinking!
+             With a foundation in software development and a curiosity for how great products are made, 
+             product management is the place where my technical mindset, creativity, and leadership come together.
+            </p>
+            <p className="about-text">
+              When I'm not thinking about products, you can find me attempting the technical bake challenges
+              from The Great British Bake Off or annoying my dog!
             </p>
             
             <div className="about-education">
