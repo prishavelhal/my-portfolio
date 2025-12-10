@@ -68,15 +68,15 @@ function App() {
     }
   ];
 
-  const projects = [
-    {
-      title: "Project Name",
-      category: "fill this",
-      description: "fill this",
-      link: "#",
-      color: "rose"
-    }
-  ];
+  // const projects = [
+  //   {
+  //     title: "Project Name",
+  //     category: "fill this",
+  //     description: "fill this",
+  //     link: "#",
+  //     color: "rose"
+  //   }
+  // ];
 
   return (
     <div className="app">
@@ -180,7 +180,7 @@ function App() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section
       <section id="portfolio" className="section">
         <div className="container">
           <h2 className="section-title">Portfolio</h2>
@@ -204,7 +204,8 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+     
 
       {/* Contact & Social Section */}
       <section id="contact" className="section">
