@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight, Mail, Linkedin, Github, FileText, Sparkles, Briefcase, GraduationCap } from 'lucide-react';
 import './App.css';
 import avatarImage from './assets/avatar.png';
+import financedashboard from './assets/financedashboard.png';
 
 function App() {
   const experiences = [
@@ -85,7 +86,7 @@ function App() {
        synchronization between services. This application’s frontend was implemented using 
        pure JavaScript, manually handling client-side state, DOM rendering, and asynchronous 
        API workflows typically abstracted by tools like React or Vue.`,
-      image: "./public/financedashboard.png",
+      image: financedashboard,
       link: "https://financedashboard-28qf2z7y2-prisha-vs-projects.vercel.app/",
       color: "rose"
     }
