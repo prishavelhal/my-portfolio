@@ -68,15 +68,30 @@ function App() {
     }
   ];
 
-  // const projects = [
-  //   {
-  //     title: "Project Name",
-  //     category: "fill this",
-  //     description: "fill this",
-  //     link: "#",
-  //     color: "rose"
-  //   }
-  // ];
+  const projects = [
+    {
+      title: "Full-Stack Financial Dashboard App",
+      category: "Dev",
+      description: `A full-stack personal finance platform built using a microservices architecture 
+      with four independently deployed Python Flask services: 
+      authentication, net balance computation, notifications, and 
+      savings progress tracking. The backend is composed of 
+      RESTful Flask APIs deployed on Render, while the frontend is a lightweight,
+       React-style interface deployed on Vercel using vanilla JavaScript, LocalStorage 
+       for client-side state, and asynchronous fetch calls for API communication. 
+       Each microservice has its own CORS configuration, enabling cross-origin communication 
+       across the distributed system. The project emphasizes human-centered design, clean 
+       separation of responsibilities, error handling with fallback logic, and real-time 
+       synchronization between services. This application’s frontend was implemented using 
+       pure JavaScript, manually handling client-side state, DOM rendering, and asynchronous 
+       API workflows typically abstracted by tools like React or Vue.`,
+      image: "./public/financedashboard.png",
+      link: "https://financedashboard-28qf2z7y2-prisha-vs-projects.vercel.app/",
+      color: "rose"
+    }
+  ];
+
+  
 
   return (
     <div className="app">
@@ -180,31 +195,46 @@ function App() {
         </div>
       </section>
 
-      {/* Portfolio Section
-      <section id="portfolio" className="section">
-        <div className="container">
-          <h2 className="section-title">Portfolio</h2>
-          <div className="portfolio-grid">
-            {projects.map((project, index) => (
-              <a 
-                key={index} 
-                href={project.link}
-                className="project-card"
-              >
-                <div className="project-header">
-                  <div className={`project-icon project-icon-${project.color}`}>
-                    <Briefcase size={20} />
-                  </div>
-                  <ArrowUpRight size={20} className="project-arrow" />
-                </div>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
-                <p className="project-description">{project.description}</p>
-              </a>
-            ))}
+     {/* Portfolio Section */}
+     <section id="portfolio" className="section">
+  <div className="container">
+    <h2 className="section-title">Portfolio</h2>
+    <div className="portfolio-grid">
+      {projects.map((project, index) => (
+        <a 
+          key={index} 
+          href={project.link}
+          className="project-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {/* Image at the top */}
+          <div className="project-image-container">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="project-image" 
+            />
           </div>
-        </div>
-      </section> */}
+          
+          {/* Content below */}
+          <div className="project-content">
+            <div className="project-header">
+              <span className={`project-tag ${project.category.toLowerCase()}`}>
+                {project.category}
+              </span>
+              <ArrowUpRight size={20} className="project-arrow" />
+            </div>
+            
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
      
 
       {/* Contact & Social Section */}
