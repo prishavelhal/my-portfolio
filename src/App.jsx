@@ -96,7 +96,7 @@ function App() {
        API workflows typically abstracted by tools like React or Vue.`,
       problemStatement: "Young professionals struggle to get a quick overview of their financial health, often spending 10+ minutes checking multiple apps and spreadsheets daily.",
     
-      targetUser: "Young professionals (ages 22-35) managing their first salary who want simple financial visibility without complexity",
+      targetUser: "Young professionals (ages 22-35) managing their first salary who want streamlined financial visibility.",
     
      userNeeds: [
       "See financial health at a glance in under 30 seconds",
