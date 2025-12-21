@@ -1,10 +1,13 @@
-import React from 'react';
-import { ArrowUpRight, Mail, Linkedin, Github, FileText, Sparkles, Briefcase, GraduationCap } from 'lucide-react';
+import React,{ useState } from 'react';
+// import { ArrowUpRight, Mail, Linkedin, Github, FileText, Sparkles, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowUpRight, Mail, Linkedin, Github, FileText, Sparkles, Briefcase, GraduationCap, X, ExternalLink } from 'lucide-react';
 import './App.css';
 import avatarImage from './assets/avatar.png';
 import financedashboard from './assets/financedashboard.png';
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const experiences = [
     {
       role: "Founder and President",
@@ -71,9 +74,14 @@ function App() {
 
   const projects = [
     {
+      id: 1,
       title: "Full-Stack Financial Dashboard App",
       category: "Dev",
-      description: `A full-stack personal finance platform built using a microservices architecture 
+      shortDescription: "A full-stack web application that allows users to track and manage their personal finances through an intuitive dashboard interface.",
+      image: financedashboard,
+      link: "https://financedashboard-28qf2z7y2-prisha-vs-projects.vercel.app/",
+      color: "rose",
+      fullDescription: `A full-stack personal finance platform built using a microservices architecture 
       with four independently deployed Python Flask services: 
       authentication, net balance computation, notifications, and 
       savings progress tracking. The backend is composed of 
@@ -86,9 +94,49 @@ function App() {
        synchronization between services. This application’s frontend was implemented using 
        pure JavaScript, manually handling client-side state, DOM rendering, and asynchronous 
        API workflows typically abstracted by tools like React or Vue.`,
-      image: financedashboard,
-      link: "https://financedashboard-28qf2z7y2-prisha-vs-projects.vercel.app/",
-      color: "rose"
+      problemStatement: "Young professionals struggle to get a quick overview of their financial health, often spending 10+ minutes checking multiple apps and spreadsheets daily.",
+    
+      targetUser: "Young professionals (ages 22-35) managing their first salary who want simple financial visibility without complexity",
+    
+     userNeeds: [
+      "See financial health at a glance in under 30 seconds",
+      "Track spending without manual categorization",
+      "Privacy-first solution (no sharing bank credentials)"
+     ],
+    
+     productGoals: [
+      "Reduce time to financial overview from 5+ minutes to under 30 seconds",
+      "Enable users to identify spending patterns within first week",
+      "Maintain 70%+ weekly active user rate"
+      ],
+    
+     keyDecisions: [
+      {
+        decision: "Local-first storage vs cloud sync",
+        rationale: "User interviews revealed privacy as top concern. Local storage eliminated authentication friction and increased trust.",
+        tradeoff: "No multi-device sync in MVP, but aligned with single-device usage pattern observed in research"
+      }
+    ],
+    
+      metrics: [
+      { metric: "Time to View Dashboard", result: "Average 15 seconds (70% improvement)" },
+      { metric: "Feature Adoption", result: "Budget tracking used by 67% of users" }
+    ],
+    
+      iterations: "Simplified from multi-page to single dashboard after testing showed users found navigation frustrating. Single-page increased task completion by 35%.",
+    
+      learnings: "Technical elegance doesn't matter if users can't accomplish goals quickly. Regular user testing prevented over-engineering.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js", "JWT Authentication"],
+      features: [
+        "Real-time expense tracking and categorization",
+        "Interactive data visualizations with Chart.js",
+        "Secure user authentication with JWT",
+        "CRUD operations for transactions and budgets",
+        "Responsive design for mobile and desktop",
+        "RESTful API architecture"
+      ],
+      challenges: "Implementing secure authentication and ensuring data consistency across the application while maintaining performance.",
+      learnings: "Gained deep understanding of full-stack development, API design, and state management in React applications."
     }
   ];
 
@@ -125,7 +173,7 @@ function App() {
           </p>
           
           <div className="badge">
-            <Sparkles size={16} />
+            {/* <Sparkles size={16} /> */}
             <span>Open to PM Internships Summer 2025</span>
           </div>
           <div className="hero-buttons">
@@ -201,15 +249,12 @@ function App() {
   <div className="container">
     <h2 className="section-title">Portfolio</h2>
     <div className="portfolio-grid">
-      {projects.map((project, index) => (
-        <a 
-          key={index} 
-          href={project.link}
+      {projects.map((project) => (
+        <div 
+          key={project.id} 
           className="project-card"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={() => setSelectedProject(project)}
         >
-          {/* Image at the top */}
           <div className="project-image-container">
             <img 
               src={project.image} 
@@ -217,8 +262,6 @@ function App() {
               className="project-image" 
             />
           </div>
-          
-          {/* Content below */}
           <div className="project-content">
             <div className="project-header">
               <span className={`project-tag ${project.category.toLowerCase()}`}>
@@ -226,11 +269,10 @@ function App() {
               </span>
               <ArrowUpRight size={20} className="project-arrow" />
             </div>
-            
             <h3 className="project-title">{project.title}</h3>
-            <p className="project-description">{project.description}</p>
+            <p className="project-short-description">{project.shortDescription}</p>
           </div>
-        </a>
+        </div>
       ))}
     </div>
   </div>
@@ -270,8 +312,157 @@ function App() {
       <footer className="footer">
         <p>Prisha Velhal © 2025</p>
       </footer>
+
+       {/* Modal Code */}
+       
+{selectedProject && (
+  <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-close">
+        <button className="close-btn" onClick={() => setSelectedProject(null)}>
+          <X size={20} />
+        </button>
+      </div>
+      
+      <div className="modal-hero">
+        <img src={selectedProject.image} alt={selectedProject.title} />
+      </div>
+
+      <div className="modal-body">
+        <div className="modal-header">
+          <div>
+            <h2 className="modal-title">{selectedProject.title}</h2>
+            <span className={`project-tag ${selectedProject.category.toLowerCase()}`}>
+              {selectedProject.category}
+            </span>
+          </div>
+          <div className="modal-links">
+            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="link-btn">
+              <ExternalLink size={16} />
+              View Live
+            </a>
+          </div>
+        </div>
+
+        {/* PM SECTION 1: Problem Statement */}
+        {selectedProject.problemStatement && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Problem & Opportunity</h3>
+            <div className="highlight-box">
+              <p className="modal-text">{selectedProject.problemStatement}</p>
+            </div>
+          </div>
+        )}
+
+        {/* PM SECTION 2: Target User & Needs */}
+        {selectedProject.targetUser && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Target User & Needs</h3>
+            <p className="modal-text"><strong>Target User:</strong> {selectedProject.targetUser}</p>
+            {selectedProject.userNeeds && selectedProject.userNeeds.length > 0 && (
+              <ul className="feature-list">
+                {selectedProject.userNeeds.map((need, i) => (
+                  <li key={i}>{need}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
+        {/* PM SECTION 3: Product Goals */}
+        {selectedProject.productGoals && selectedProject.productGoals.length > 0 && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Product Goals</h3>
+            <ul className="feature-list">
+              {selectedProject.productGoals.map((goal, i) => (
+                <li key={i}>{goal}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* PM SECTION 4: Key Decisions */}
+        {selectedProject.keyDecisions && selectedProject.keyDecisions.length > 0 && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Key Product Decisions</h3>
+            {selectedProject.keyDecisions.map((item, i) => (
+              <div key={i} className="decision-card">
+                <div className="decision-title">{item.decision}</div>
+                <div className="decision-label">Rationale</div>
+                <div className="decision-content">{item.rationale}</div>
+                <div className="decision-label">Tradeoff</div>
+                <div className="decision-content">{item.tradeoff}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* PM SECTION 5: Metrics & Impact */}
+        {selectedProject.metrics && selectedProject.metrics.length > 0 && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Metrics & Impact</h3>
+            <div className="metrics-grid">
+              {selectedProject.metrics.map((item, i) => (
+                <div key={i} className="metric-card">
+                  <div className="metric-label">{item.metric}</div>
+                  <div className="metric-value">{item.result}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* TECHNICAL SECTION: Overview */}
+        <div className="modal-section">
+          <h3 className="modal-section-title">Technical Implementation</h3>
+          <p className="modal-text">{selectedProject.fullDescription}</p>
+        </div>
+
+        {/* Technologies */}
+        <div className="modal-section">
+          <h3 className="modal-section-title">Technologies Used</h3>
+          <div className="tech-grid">
+            {selectedProject.technologies.map((tech, i) => (
+              <span key={i} className="tech-tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Key Features */}
+        <div className="modal-section">
+          <h3 className="modal-section-title">Key Features</h3>
+          <ul className="feature-list">
+            {selectedProject.features.map((feature, i) => (
+              <li key={i}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* PM SECTION 6: Iterations */}
+        {selectedProject.iterations && (
+          <div className="modal-section">
+            <h3 className="modal-section-title">Iterations & Learnings</h3>
+            <div className="highlight-box">
+              <p className="modal-text"><strong>Iterations:</strong> {selectedProject.iterations}</p>
+            </div>
+          </div>
+        )}
+
+        {/* Challenges & Learnings */}
+        <div className="modal-section">
+          <h3 className="modal-section-title">Challenges & Solutions</h3>
+          <p className="modal-text">{selectedProject.challenges}</p>
+        </div>
+
+        <div className="modal-section">
+          <h3 className="modal-section-title">Key Learnings</h3>
+          <p className="modal-text">{selectedProject.learnings}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 }
-
 export default App;
