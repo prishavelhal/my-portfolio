@@ -79,7 +79,7 @@ function App() {
       category: "Dev",
       shortDescription: "A full-stack web application that allows users to track and manage their personal finances through an intuitive dashboard interface.",
       image: financedashboard,
-      link: "https://financedashboard-28qf2z7y2-prisha-vs-projects.vercel.app/",
+      link: "https://financedashboard-rho.vercel.app/",
       color: "rose",
       fullDescription: `A full-stack personal finance platform built using a microservices architecture 
       with four independently deployed Python Flask services: 
