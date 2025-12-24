@@ -100,47 +100,43 @@ function App() {
     
      userNeeds: [
       "See financial health at a glance in under 30 seconds",
-      "Track spending without manual categorization",
+      "Track spending with categorization to identify trends and patterns in expenses",
       "Privacy-first solution (no sharing bank credentials)"
      ],
     
      productGoals: [
-      "Reduce time to financial overview from 5+ minutes to under 30 seconds",
+      "Reduce time to financial overview from 10+ minutes to under 30 seconds",
       "Enable users to identify spending patterns within first week",
-      "Maintain 70%+ weekly active user rate"
       ],
     
-     keyDecisions: [
+      //  keyDecisions: [
+      //   {
+      //     decision: "Local-first storage vs cloud sync",
+      //     rationale: "User interviews revealed privacy as top concern. Local storage eliminated authentication friction and increased trust.",
+      //     tradeoff: "No multi-device sync in MVP, but aligned with single-device usage pattern observed in research"
+      //   }
+      // ],
+      keyDecisions: [
       {
-        decision: "Local-first storage vs cloud sync",
-        rationale: "User interviews revealed privacy as top concern. Local storage eliminated authentication friction and increased trust.",
-        tradeoff: "No multi-device sync in MVP, but aligned with single-device usage pattern observed in research"
-      }
+        decision: "Microservices architecture vs monolithic backend",
+        rationale: "Chose microservices to allow independent scaling and deployment of features like login, notifications, savings, net income calculations, enhancing maintainability.",
+        tradeoff: "Increased complexity during deployment as each service requires separate hosting and CORS configuration."
+      },
     ],
-    
-      metrics: [
-      { metric: "Time to View Dashboard", result: "Average 15 seconds (70% improvement)" },
-      { metric: "Feature Adoption", result: "Budget tracking used by 67% of users" }
-    ],
-    
-      iterations: "Simplified from multi-page to single dashboard after testing showed users found navigation frustrating. Single-page increased task completion by 35%.",
-    
-      learnings: "Technical elegance doesn't matter if users can't accomplish goals quickly. Regular user testing prevented over-engineering.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js", "JWT Authentication"],
+      iterations: "Provided snapshot of all information on dashboard allowing for efficient viewing and flexibility to navigate to additional pages.",
+      learnings: "Technical complexity is less significant if users can't accomplish goals quickly (i.e. viewing financial information).",
+      technologies: ["JavaScript", "HTML/CSS", "RESTful APIs", "Python", "Flask", "Microservices Architecture", "Render", "Vercel"],
       features: [
-        "Real-time expense tracking and categorization",
-        "Interactive data visualizations with Chart.js",
-        "Secure user authentication with JWT",
-        "CRUD operations for transactions and budgets",
+        "Real-time expense and income tracking with categorization",
+        "CRUD operations for expenses and income entries",
         "Responsive design for mobile and desktop",
-        "RESTful API architecture"
+        "Microservice architecture"
       ],
-      challenges: "Implementing secure authentication and ensuring data consistency across the application while maintaining performance.",
-      learnings: "Gained deep understanding of full-stack development, API design, and state management in React applications."
+      challenges: "Integrating multiple microservices with independent deployments required careful CORS configuration and asynchronous API handling on the frontend.",
+      learnings: "Building a microservices architecture enhanced maintainability and scalability. However, it introduced complexity in deployment and inter-service communication that required careful planning."
     }
   ];
 
-  
 
   return (
     <div className="app">
