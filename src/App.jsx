@@ -70,61 +70,61 @@ function App() {
   ];
 
   const projects = [
-    {
-      id: 2,
-      title: "LLM-based SAT prep tutor",
-      category: "Dev",
-      shortDescription: "A full-stack web application that allows users to track and manage their personal finances through an intuitive dashboard interface.",
-      image: financedashboard,
-      link: "https://financedashboard-rho.vercel.app/",
-      color: "rose",
-      fullDescription: `A full-stack personal finance platform built using a microservices architecture 
-      with four independently deployed Python Flask services: 
-      authentication, net balance computation, notifications, and 
-      savings progress tracking. The backend is composed of 
-      RESTful Flask APIs deployed on Render, while the frontend is a lightweight,
-       React-style interface deployed on Vercel using vanilla JavaScript, LocalStorage 
-       for client-side state, and asynchronous fetch calls for API communication. 
-       Each microservice has its own CORS configuration, enabling cross-origin communication 
-       across the distributed system. The project emphasizes human-centered design, clean 
-       separation of responsibilities, error handling with fallback logic, and real-time 
-       synchronization between services. This application’s frontend was implemented using 
-       pure JavaScript, manually handling client-side state, DOM rendering, and asynchronous 
-       API workflows typically abstracted by tools like React or Vue.`,
-      problemStatement: "Young professionals struggle to get a quick overview of their financial health, often spending 10+ minutes checking multiple apps and spreadsheets daily.",
+    // {
+    //   id: 2,
+    //   title: "LLM-based SAT prep tutor",
+    //   category: "Dev",
+    //   shortDescription: "A full-stack web application that allows users to track and manage their personal finances through an intuitive dashboard interface.",
+    //   image: financedashboard,
+    //   link: "https://financedashboard-rho.vercel.app/",
+    //   color: "rose",
+    //   fullDescription: `A full-stack personal finance platform built using a microservices architecture 
+    //   with four independently deployed Python Flask services: 
+    //   authentication, net balance computation, notifications, and 
+    //   savings progress tracking. The backend is composed of 
+    //   RESTful Flask APIs deployed on Render, while the frontend is a lightweight,
+    //    React-style interface deployed on Vercel using vanilla JavaScript, LocalStorage 
+    //    for client-side state, and asynchronous fetch calls for API communication. 
+    //    Each microservice has its own CORS configuration, enabling cross-origin communication 
+    //    across the distributed system. The project emphasizes human-centered design, clean 
+    //    separation of responsibilities, error handling with fallback logic, and real-time 
+    //    synchronization between services. This application’s frontend was implemented using 
+    //    pure JavaScript, manually handling client-side state, DOM rendering, and asynchronous 
+    //    API workflows typically abstracted by tools like React or Vue.`,
+    //   problemStatement: "Young professionals struggle to get a quick overview of their financial health, often spending 10+ minutes checking multiple apps and spreadsheets daily.",
     
-      targetUser: "Young professionals (ages 22-35) managing their first salary who want streamlined financial visibility.",
+    //   targetUser: "Young professionals (ages 22-35) managing their first salary who want streamlined financial visibility.",
     
-     userNeeds: [
-      "See financial health at a glance in under 30 seconds",
-      "Track spending with categorization to identify trends and patterns in expenses",
-      "Privacy-first solution (no sharing bank credentials)"
-     ],
+    //  userNeeds: [
+    //   "See financial health at a glance in under 30 seconds",
+    //   "Track spending with categorization to identify trends and patterns in expenses",
+    //   "Privacy-first solution (no sharing bank credentials)"
+    //  ],
     
-     productGoals: [
-      "Reduce time to financial overview from 10+ minutes to under 30 seconds",
-      "Enable users to identify spending patterns within first week",
-      ],
+    //  productGoals: [
+    //   "Reduce time to financial overview from 10+ minutes to under 30 seconds",
+    //   "Enable users to identify spending patterns within first week",
+    //   ],
       
-      keyDecisions: [
-      {
-        decision: "Microservices architecture vs monolithic backend",
-        rationale: "Chose microservices to allow independent scaling and deployment of features like login, notifications, savings, net income calculations, enhancing maintainability.",
-        tradeoff: "Increased complexity during deployment as each service requires separate hosting and CORS configuration."
-      },
-    ],
-      iterations: "Provided snapshot of all information on dashboard allowing for efficient viewing and flexibility to navigate to additional pages.",
-      learnings: "Technical complexity is less significant if users can't accomplish goals quickly (i.e. viewing financial information).",
-      technologies: ["JavaScript", "HTML/CSS", "RESTful APIs", "Python", "Flask", "Microservices Architecture", "Render", "Vercel"],
-      features: [
-        "Real-time expense and income tracking with categorization",
-        "CRUD operations for expenses and income entries",
-        "Responsive design for mobile and desktop",
-        "Microservice architecture"
-      ],
-      challenges: "Integrating multiple microservices with independent deployments required careful CORS configuration and asynchronous API handling on the frontend.",
-      learnings: "Building a microservices architecture enhanced maintainability and scalability. However, it introduced complexity in deployment and inter-service communication that required careful planning."
-    },
+    //   keyDecisions: [
+    //   {
+    //     decision: "Microservices architecture vs monolithic backend",
+    //     rationale: "Chose microservices to allow independent scaling and deployment of features like login, notifications, savings, net income calculations, enhancing maintainability.",
+    //     tradeoff: "Increased complexity during deployment as each service requires separate hosting and CORS configuration."
+    //   },
+    // ],
+    //   iterations: "Provided snapshot of all information on dashboard allowing for efficient viewing and flexibility to navigate to additional pages.",
+    //   learnings: "Technical complexity is less significant if users can't accomplish goals quickly (i.e. viewing financial information).",
+    //   technologies: ["JavaScript", "HTML/CSS", "RESTful APIs", "Python", "Flask", "Microservices Architecture", "Render", "Vercel"],
+    //   features: [
+    //     "Real-time expense and income tracking with categorization",
+    //     "CRUD operations for expenses and income entries",
+    //     "Responsive design for mobile and desktop",
+    //     "Microservice architecture"
+    //   ],
+    //   challenges: "Integrating multiple microservices with independent deployments required careful CORS configuration and asynchronous API handling on the frontend.",
+    //   learnings: "Building a microservices architecture enhanced maintainability and scalability. However, it introduced complexity in deployment and inter-service communication that required careful planning."
+    // },
     {
       id: 1,
       title: "Full-Stack Financial Dashboard App",
