@@ -140,6 +140,7 @@ function App() {
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">Blog</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
@@ -159,10 +160,6 @@ function App() {
             Currently studying Computer Science with a minor in Business at Oregon State University and seeking opportunities to learn and grow in product.
           </p>
           
-          <div className="badge">
-            {/* <Sparkles size={16} /> */}
-            <span>Open to PM Internships Summer 2026</span>
-          </div>
           <div className="hero-buttons">
             <a href="#portfolio" className="btn btn-primary">
               View My Work
