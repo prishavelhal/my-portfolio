@@ -10,6 +10,26 @@ function App() {
 
   const experiences = [
     {
+      role: "Product Manager Intern",
+      company: "IBM",
+      period: "June 2026  - September 2026",
+      description: 
+      <ul className='bullet-list'>
+        <li>Led end-to-end consumability testing for IBM COBOL Elevate in a z/OS mainframe environment, partnering
+cross-functionally with Product and Engineering to evaluate installation, configuration, and core workflows against a 3-hour
+time-to-value target (≤2 hours setup; ≤1 hour first successful use case) and identify barriers to adoption..</li>
+                    
+        <li>Tested IBM COBOL Elevate’s AI-assisted code remediation workflow on z/OS, evaluating how developers identify,
+understand, and resolve compiler migration issues and translating usability gaps into actionable recommendations for
+Design and UX teams.</li>
+                      
+        <li>Developed the competitive landscape for IBM COBOL Elevate by evaluating 13 enterprise modernization solutions and
+        translating technical differentiators into a seller-ready resource for go-to-market strategy and product positioning.</li>
+
+      </ul>,
+      tags: ["Artificial Intelligence","End-to-End Testing", "Competitive Analysis", "User Research", "Product Development", "User Experience"]
+    },
+    {
       role: "Founder and President",
       company: "Product Management Club @ OSU",
       period: "June 2025  - Present",
@@ -164,7 +184,7 @@ function App() {
             <a href="#portfolio" className="btn btn-primary">
               View My Work
             </a>
-            <a href="resume.pdf" className="btn btn-secondary">
+            <a href="Prisha_Velhal_Resume_Fall_2026.pdf" className="btn btn-secondary">
               <FileText size={18} />
               Resume
             </a>
@@ -178,7 +198,7 @@ function App() {
           <h2 className="section-title">About Me</h2>
           <div className="about-card">
             <p className="about-text">
-              Hello! I'm a third-year student at Oregon State University majoring in Computer Science with a minor in Business.
+              Hello! I'm a fourth-year student at Oregon State University majoring in Computer Science with a minor in Business.
             </p>
             <p className="about-text">
              I’m passionate about blending data-driven insights and creative problem solving 
